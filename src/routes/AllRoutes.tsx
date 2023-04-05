@@ -1,7 +1,15 @@
 import React from "react";
+import { createBrowserRouter } from "react-router-dom";
+import { HomeLayouts } from "../components";
 
-const AllRoutes = () => {
-  return <div>AllRoutes</div>;
-};
-
-export default AllRoutes;
+export const element = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayouts />,
+    children: [
+      {
+        index: true,
+      },
+    ],
+  },
+]);
