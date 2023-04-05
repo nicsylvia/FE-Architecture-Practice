@@ -1,8 +1,10 @@
-import React from "react";
+import React, { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { HomeLayouts } from "../components";
-import { About, Home } from "../pages";
 import { ErrorBoundary, NotFound } from "../utils";
+
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
 
 export const element = createBrowserRouter([
   {
